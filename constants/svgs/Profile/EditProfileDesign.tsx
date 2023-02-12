@@ -1,0 +1,37 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface EditProfileDesignProps {
+  width: number;
+  height: number;
+}
+
+export function EditProfileDesign({ width, height }: EditProfileDesignProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height} viewBox="0 0 506 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.4" d="M483.322 608.219C483.332 622.947 469.15 633.527 455.036 629.322L19.3521 499.502C8.54115 496.281 1.92023 485.404 4.02364 474.32L86.1441 41.5927L425.262 12.0484L483.005 131.51L483.322 608.219Z" fill="url(#paint0_linear_936_3148)"/>
+  <path d="M505.98 596.219C505.99 610.947 491.808 621.527 477.695 617.322L42.0103 487.502C31.1994 484.281 24.5784 473.404 26.6818 462.32L108.802 29.5927L447.92 0.0483856L505.663 119.51L505.98 596.219Z" fill="url(#paint1_linear_936_3148)"/>
+  <defs>
+  <linearGradient id="paint0_linear_936_3148" x1="362.146" y1="593.189" x2="39.3144" y2="387.744" gradientUnits="userSpaceOnUse">
+  <stop offset="0.0862975" stop-color="#16FFD8"/>
+  <stop offset="0.98125" stop-color="#27AAC5"/>
+  <stop offset="1" stop-color="#27A8C4"/>
+  </linearGradient>
+  <linearGradient id="paint1_linear_936_3148" x1="384.805" y1="581.189" x2="61.9726" y2="375.744" gradientUnits="userSpaceOnUse">
+  <stop offset="0.0862975" stop-color="#16FFD8"/>
+  <stop offset="0.98125" stop-color="#27AAC5"/>
+  <stop offset="1" stop-color="#27A8C4"/>
+  </linearGradient>
+  </defs>
+  </svg>
+
+
+
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}

@@ -1,0 +1,33 @@
+import React from "react";
+import { SvgXml } from "react-native-svg";
+import { Layout } from "../..";
+
+interface SvgProps {
+  width?: number;
+  height?: number;
+}
+
+const valueHeight = Layout.height;
+const valueWdidth = Layout.width;
+
+export function OnboardingSecond({
+  width = valueWdidth,
+  height = valueHeight,
+}: SvgProps) {
+  const svgMarkup = `
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width=${width} height=${height} viewBox="0 0 385.649 316.513">
+        <defs>
+            <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0"/>
+            <stop offset="0.398" stop-color="#00302e"/>
+            <stop offset="1" stop-color="#198380"/>
+            </linearGradient>
+        </defs>
+        <path id="onboarding-2" d="M11287,8565l.394,306.462s171.578-156.988,251.23-98.687,134.025,108.738,134.025,108.738l-.5-316.513Z" transform="translate(-11287 -8565.001)" fill="url(#linear-gradient)"/>
+    </svg>
+
+    `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+  return Svg;
+}

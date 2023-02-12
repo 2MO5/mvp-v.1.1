@@ -1,0 +1,26 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface MoviesProps {
+  width: number;
+  height: number;
+}
+
+export function Movies({ width, height }: MoviesProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M5 14H27V25C27 25.2652 26.8946 25.5196 26.7071 25.7071C26.5196 25.8946 26.2652 26 26 26H6C5.73478 26 5.48043 25.8946 5.29289 25.7071C5.10536 25.5196 5 25.2652 5 25V14Z" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M5.00097 14.0002L26.251 8.30023L25.2135 4.43773C25.1802 4.31061 25.1219 4.19141 25.042 4.0871C24.9621 3.9828 24.8622 3.8955 24.7481 3.83031C24.634 3.76511 24.508 3.72335 24.3776 3.70745C24.2472 3.69155 24.1149 3.70185 23.9885 3.73773L4.67597 8.91273C4.54861 8.94614 4.4291 9.00437 4.3243 9.08408C4.2195 9.16379 4.13147 9.26341 4.06527 9.37723C3.99907 9.49105 3.956 9.61682 3.93853 9.74733C3.92106 9.87783 3.92953 10.0105 3.96347 10.1377L5.00097 14.0002Z" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M16.2617 5.7998L22.3867 9.3373" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M7.57422 8.1377L13.6867 11.6752" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}

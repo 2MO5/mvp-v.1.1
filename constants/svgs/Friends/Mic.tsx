@@ -1,0 +1,25 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface MicProps {
+  width: number;
+  height: number;
+}
+
+export function Mic({ width, height }: MicProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.125 5C13.125 3.27411 11.7259 1.875 10 1.875C8.27411 1.875 6.875 3.27411 6.875 5V10C6.875 11.7259 8.27411 13.125 10 13.125C11.7259 13.125 13.125 11.7259 13.125 10V5Z" stroke="#00FFF7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 15.625V18.125" stroke="#00FFF7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M15.5938 10.625C15.4316 11.9947 14.7726 13.2573 13.7416 14.1734C12.7105 15.0896 11.3792 15.5956 10 15.5956C8.62076 15.5956 7.28945 15.0896 6.25845 14.1734C5.22744 13.2573 4.5684 11.9947 4.40625 10.625" stroke="#00FFF7" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}

@@ -1,0 +1,43 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface AddPostProps {
+  width: number;
+  height: number;
+}
+
+export function AddPost({ width, height }: AddPostProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height} viewBox="0 0 123 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_274_3192)">
+    <rect x="29" y="19" width="65" height="64" rx="32" fill="url(#paint0_linear_274_3192)"/>
+    </g>
+    <path d="M69.24 48.2395C70.3658 47.1137 70.9983 45.5867 70.9983 43.9945C70.9983 42.4024 70.3658 40.8754 69.24 39.7495C68.1142 38.6237 66.5872 37.9912 64.995 37.9912C63.4028 37.9912 61.8758 38.6237 60.75 39.7495L54 46.4995V54.9995H62.5L69.24 48.2395Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M65 44L51 58" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M66.5 51H58" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <defs>
+    <filter id="filter0_d_274_3192" x="0" y="0" width="123" height="122" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feMorphology radius="7" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_274_3192"/>
+    <feOffset dy="10"/>
+    <feGaussianBlur stdDeviation="11"/>
+    <feComposite in2="hardAlpha" operator="out"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.996078 0 0 0 0 0.831373 0 0 0 0.56 0"/>
+    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_274_3192"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_274_3192" result="shape"/>
+    </filter>
+    <linearGradient id="paint0_linear_274_3192" x1="61.5" y1="19" x2="61.5" y2="83" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#00FED4"/>
+    <stop offset="1" stop-color="#1DFCF4"/>
+    </linearGradient>
+    </defs>
+  </svg>
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}

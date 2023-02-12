@@ -1,0 +1,26 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface GamesProps {
+  width: number;
+  height: number;
+}
+
+export function Games({ width, height }: GamesProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height}  viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M19 13.5H23" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 13.5H13" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M11 11.5V15.5" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21.4991 6.96289L10.4991 7.00039C8.97126 7.0033 7.4931 7.54327 6.32314 8.52584C5.15319 9.50842 4.36594 10.8711 4.09908 12.3754V12.3754L2.04908 22.8879C1.91746 23.622 2.02378 24.379 2.35254 25.0484C2.6813 25.7179 3.21532 26.2648 3.87673 26.6095C4.53814 26.9541 5.29235 27.0785 6.0294 26.9644C6.76645 26.8504 7.44779 26.5038 7.97408 25.9754V25.9754L13.3741 20.0004L21.4991 19.9629C23.223 19.9629 24.8763 19.2781 26.0953 18.0591C27.3143 16.8401 27.9991 15.1868 27.9991 13.4629C27.9991 11.739 27.3143 10.0857 26.0953 8.8667C24.8763 7.64771 23.223 6.96289 21.4991 6.96289V6.96289Z" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M27.9 12.3379L29.95 22.8879C30.0816 23.622 29.9753 24.379 29.6465 25.0484C29.3178 25.7179 28.7838 26.2648 28.1224 26.6095C27.4609 26.9541 26.7067 27.0785 25.9697 26.9644C25.2326 26.8504 24.5513 26.5038 24.025 25.9754V25.9754L18.625 19.9754" stroke="#00FFF6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}

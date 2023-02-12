@@ -1,0 +1,35 @@
+import React from "react";
+import { View, Text } from "react-native";
+import { SvgXml } from "react-native-svg";
+
+interface WrittenDesignProps {
+  width: number;
+  height: number;
+}
+
+export function WrittenDesign({ width, height }: WrittenDesignProps) {
+  const svgMarkup = `
+  <svg width=${width} height=${height}  viewBox="0 0 402 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.8">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M-723.114 370.327L-668.436 359.079C-613.757 347.832 -504.4 325.336 -486.22 203.996C-468.041 82.6552 -541.039 -137.531 -513.741 -248.987C-486.444 -360.443 -358.852 -363.169 -258.612 -395.549C-158.373 -427.929 -85.4871 -489.962 32.9876 -502.573C151.462 -515.184 315.526 -478.372 397.557 -459.966L479.589 -441.56L534.295 -382.253L497.852 -351.237C461.409 -320.22 388.523 -258.186 315.637 -196.153C242.751 -134.12 169.865 -72.0861 96.9793 -10.0526C24.0933 51.9808 -48.7927 114.014 -121.679 176.048C-194.565 238.081 -267.451 300.115 -340.337 362.148C-413.223 424.181 -486.109 486.215 -522.552 517.232L-558.995 548.248L-723.114 370.327Z" fill="url(#paint0_linear_829_3728)" style="mix-blend-mode:overlay"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M-703.641 439.039L-648.963 427.791C-594.284 416.544 -484.927 394.048 -466.748 272.708C-448.568 151.367 -521.566 -68.8186 -494.269 -180.275C-466.971 -291.731 -339.379 -294.457 -239.14 -326.837C-138.9 -359.217 -66.0144 -421.25 52.4603 -433.861C170.935 -446.472 334.998 -409.66 417.03 -391.254L499.062 -372.848L553.768 -313.541L517.325 -282.525C480.882 -251.508 407.996 -189.474 335.11 -127.441C262.224 -65.4076 189.338 -3.37417 116.452 58.6593C43.566 120.693 -29.32 182.726 -102.206 244.76C-175.092 306.793 -247.978 368.826 -320.864 430.86C-393.75 492.893 -466.636 554.927 -503.079 585.944L-539.522 616.96L-703.641 439.039Z" fill="url(#paint1_linear_829_3728)" style="mix-blend-mode:overlay"/>
+  </g>
+  <defs>
+  <linearGradient id="paint0_linear_829_3728" x1="-423.703" y1="-253.637" x2="336.275" y2="-172.949" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#00FED4" stop-opacity="0.34"/>
+  <stop offset="1" stop-color="white" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="paint1_linear_829_3728" x1="-404.231" y1="-184.925" x2="355.747" y2="-104.237" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#00FED4" stop-opacity="0.34"/>
+  <stop offset="1" stop-color="white" stop-opacity="0"/>
+  </linearGradient>
+  </defs>
+  </svg>
+
+
+  `;
+
+  const Svg = () => <SvgXml xml={svgMarkup} />;
+
+  return <Svg />;
+}
